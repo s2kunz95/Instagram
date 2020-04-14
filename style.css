@@ -3,8 +3,13 @@
 	grid-template-columns: 15% 70% 15%;
 }
 
-.menu-bar {
+.top-bar {
 	grid-column: 1/4;
+}
+
+.menu-bar {
+	width: 70%;
+	margin: 0 auto;
 }
 
 .header {
