@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Header</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			display: grid;
+			grid-template-columns: 25% 50% 25%;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.header {
+			display: flex;
+			height: 200px;
+			grid-column: 2/3;
+		}
+
+		.header .avatar {
+			display: flex;
+			width: 30%;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.header .avt-round {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+
+		.header .user-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+		}
+
+		.message, .relationship, .suggestions, .more {
+			line-height: 26px;
+			background: #FFF;
+			border-radius: 4px; 
+		}
+
+		.user-info .user-menu span {
+			font-size: 25px;
+		}
+
+		.user-info .user-menu img {
+			width: 18px;
+			height: 18px;
+			padding:0 15px 0 8px; 
+
+		}
+
+		.user-menu .message {
+			font-weight: bold;
+			padding: 0 15px;
+			border: 1px solid #CCC;
+		}
+
+		.user-menu .relationship {
+			color: #555;
+			padding: 0 28px;
+			border: 1px solid #CCC;
+		}
+
+		.user-menu .suggestions {
+			padding: 0 12px;
+			border: 1px solid #CCC;
+		}
+
+		.user-menu .more {
+			font-size: 18px;
+			padding: 0 10px;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="avatar">
+			<div class="avt-round">
+				<img src="./huy-me.jpg">
+			</div>
+		</div>
+		<div class="user-info">
+			<div class="user-menu">
+				<span>ctpham_</span>
+				<img src="./ig-check.png">
+				<button class="message">Nhắn tin</button>
+				<button class="relationship">
+					<i class="fas fa-user-check"></i>
+				</button>
+				<button class="suggestions">
+					<i class="fas fa-caret-down"></i>
+				</button>
+				<button class="more">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+			</div>
+			<div class="user-follow"></div>
+			<div class="user-bio"></div>
+		</div>
+	</div>
+	<script src="https://kit.fontawesome.com/9b3bf5531d.js" crossorigin="anonymous"></script>
+</body>
+</html>
