@@ -5,9 +5,13 @@
 	padding: 0;
 }
 
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
 .container {
 	display: grid;
-	grid-template-columns: 15% 70% 15%;
+	grid-template-columns: 25% 50% 25%;
 }
 
 /*Menu bar*/
@@ -37,11 +41,11 @@
 	text-align: center;
 	font-family: FontAwesome, sans-serif;
 	font-size: 12px;
-	color: #AAA;
 	width: 200px;
 	padding: 5px 8px;
 	border: 1px solid #BBB;
 	border-radius: 3px;
+	outline: none;
 }
 
 ::placeholder {
@@ -66,8 +70,74 @@
 /*Header*/
 
 .header {
+	display: flex;
+	height: 200px;
 	grid-column: 2/3;
 }
+
+.header .avatar {
+	display: flex;
+	width: 30%;
+	justify-content: center;
+	align-items: center;
+}
+
+.header .avt-round {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.header .user-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.message, .relationship, .suggestions, .more {
+	line-height: 26px;
+	background: #FFF;
+	border-radius: 4px; 
+	outline: none;
+	cursor: pointer;
+}
+
+.user-info .user-menu span {
+	font-size: 25px;
+}
+
+.user-info .user-menu img {
+	width: 18px;
+	height: 18px;
+	padding:0 15px 0 8px; 
+
+}
+
+.user-menu .message {
+	font-weight: bold;
+	padding: 0 15px;
+	border: 1px solid #CCC;
+}
+
+.user-menu .relationship {
+	color: #555;
+	padding: 0 28px;
+	border: 1px solid #CCC;
+}
+
+.user-menu .suggestions {
+	padding: 0 12px;
+	border: 1px solid #CCC;
+}
+
+.user-menu .more {
+	font-size: 18px;
+	padding: 0 10px;
+	border: none;
+}
+
+/*Saved Stories*/
 
 .saved-stories {
 	grid-column: 2/3;
