@@ -25,7 +25,6 @@
 			display: flex;
 			width: 30%;
 			justify-content: center;
-			align-items: center;
 		}
 
 		.header .avt-round {
@@ -36,12 +35,19 @@
 		}
 
 		.header .user-info {
+			flex-grow: 1;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
 		}
 
+		.header .user-menu {
+			display: flex;
+		}
+
 		.message, .relationship, .suggestions, .more {
+			padding: 0 10px;
+			margin-right: 2%;
 			line-height: 26px;
 			background: #FFF;
 			border-radius: 4px; 
@@ -59,7 +65,7 @@
 		}
 
 		.user-menu .message {
-			font-weight: bold;
+			font-weight: 600;
 			padding: 0 15px;
 			border: 1px solid #CCC;
 		}
@@ -79,6 +85,45 @@
 			font-size: 18px;
 			padding: 0 10px;
 			border: none;
+		}
+
+		/*User follow*/
+
+		.header .user-follow {
+			display: flex;
+			margin: 20px 0;
+		}
+
+		.user-follow > * {
+			padding-right: 5%;
+		}
+
+		.user-follow .counter {
+			font-weight: 600;
+		}
+
+		/*User bio*/
+		.user-bio {
+			line-height: 24px;
+		}
+
+		.user-bio h1 {
+			font-size: 16px;
+		}
+
+		.user-bio a {
+			text-decoration: none;
+			color: #00376b;
+			font-weight: 600;
+		}
+
+		.user-bio .friends-follow {
+			font-size: 12px;
+			margin-top: 14px;
+		}
+		.user-bio .friends-follow a{
+			font-weight: normal;
+			color: rgb(38,38,38);
 		}
 	</style>
 </head>
@@ -104,8 +149,23 @@
 					<i class="fas fa-ellipsis-h"></i>
 				</button>
 			</div>
-			<div class="user-follow"></div>
-			<div class="user-bio"></div>
+			<div class="user-follow">
+				<div class="posts">
+					<span class="counter">1374</span> bài viết
+				</div>
+				<div class="followers">
+					<span class="counter">716k</span> người theo dõi
+				</div>
+				<div class="followed">
+					Đang theo dõi <span class="counter">404</span> người dùng
+				</div>
+			</div>
+			<div class="user-bio">
+				<h1>Huyme</h1>
+				<p>“Best Instagram account, ★ ★ ★ ★ ★” - Huyme</p>
+				<a href="https://l.instagram.com/?u=http%3A%2F%2Fyoutube.com%2FHuymeProductions&amp;e=ATNfC_lOLCULe9LsFkY8Ufi1sT-rN3QxCzKvZlKJJ9Zm6u9LjCIeR6E5l2n2QB7UV9bH2jI79ar0-owL&amp;s=1" target="_blank">youtube.com/HuymeProductions</a>
+				<p class="friends-follow">Có <a href="https://www.instagram.com/truongplayboy/?hl=vi">truongplayboy</a>, <a href="https://www.instagram.com/viettran21/?hl=vi">viettran21</a>, <a href="https://www.instagram.com/mienguyen/?hl=vi">mienguyen</a> và 13 người khác theo dõi</p>
+			</div>
 		</div>
 	</div>
 	<script src="https://kit.fontawesome.com/9b3bf5531d.js" crossorigin="anonymous"></script>

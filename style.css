@@ -19,6 +19,7 @@ body {
 .top-bar {
 	grid-column: 1/4;
 	border-bottom: 1px solid rgb(219,219,219);
+	margin-bottom: 30px;
 }
 
 .menu-bar {
@@ -79,7 +80,6 @@ body {
 	display: flex;
 	width: 30%;
 	justify-content: center;
-	align-items: center;
 }
 
 .header .avt-round {
@@ -90,17 +90,22 @@ body {
 }
 
 .header .user-info {
+	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
+.header .user-menu {
+	display: flex;
+}
+
 .message, .relationship, .suggestions, .more {
+	padding: 0 10px;
+	margin-right: 2%;
 	line-height: 26px;
 	background: #FFF;
 	border-radius: 4px; 
-	outline: none;
-	cursor: pointer;
 }
 
 .user-info .user-menu span {
@@ -115,7 +120,7 @@ body {
 }
 
 .user-menu .message {
-	font-weight: bold;
+	font-weight: 600;
 	padding: 0 15px;
 	border: 1px solid #CCC;
 }
@@ -135,6 +140,45 @@ body {
 	font-size: 18px;
 	padding: 0 10px;
 	border: none;
+}
+
+/*User follow*/
+
+.header .user-follow {
+	display: flex;
+	margin: 20px 0;
+}
+
+.user-follow > * {
+	padding-right: 5%;
+}
+
+.user-follow .counter {
+	font-weight: 600;
+}
+
+/*User bio*/
+.user-bio {
+	line-height: 24px;
+}
+
+.user-bio h1 {
+	font-size: 16px;
+}
+
+.user-bio a {
+	text-decoration: none;
+	color: #00376b;
+	font-weight: 600;
+}
+
+.user-bio .friends-follow {
+	font-size: 12px;
+	margin-top: 14px;
+}
+.user-bio .friends-follow a{
+	font-weight: normal;
+	color: rgb(38,38,38);
 }
 
 /*Saved Stories*/
