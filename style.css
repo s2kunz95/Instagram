@@ -232,7 +232,32 @@ body {
 
 .sub-header {
 	grid-column: 2/3;
+	display: flex;
+	justify-content: center;
+	height: 52px;
+	border-top: 1px solid #DDD;
+	margin-top: 50px;
 }
+
+.sub-header a {
+	text-decoration: none;
+	color: rgb(142,142,142);
+	line-height: 52px;
+	margin-right: 60px;
+	outline: none;
+}
+
+
+.sub-header a:focus .column{
+	color: #262626;
+	border-top: 1px solid #262626;
+}
+
+.sub-header a:focus span svg{
+	fill: #262626;
+}
+
+/*Main*/
 
 .main {
 	grid-column: 2/3;
