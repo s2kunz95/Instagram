@@ -314,6 +314,7 @@ body {
 
 .item:hover .overlay {
 	opacity: 1;
+	cursor: pointer;
 }
 
 .overlay .like {
