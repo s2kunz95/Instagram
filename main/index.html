@@ -69,178 +69,594 @@
 		.overlay .like {
 			margin-right: 12%;
 		}
+
+		/*Modal box*/
+
+		.box-modal {
+			display: none;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,0.5);
+		}
+
+		.box-modal .modal-content {
+			display: flex;
+			width: 45%;
+			height: 60%;
+		}
+
+		.modal-content .modal-img {
+			width: 60%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.modal-img img {
+			width: 100%;
+		}
+
+		.modal-side {
+			display: flex;
+			flex-direction: column;
+			width: 40%;
+			height: 100%;
+		}
+
+		.modal-content .modal-header {
+			display: flex;
+			background: #FFF;
+			width: 100%;
+			height: 20%;
+			border-bottom: 1px solid #DDD;
+		}
+
+		.modal-content .avatar {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 70%;
+		}
+
+		.modal-content .avatar .round {
+			width: 50%;
+			height: 50%;
+			overflow: hidden;
+			border-radius: 50%;
+		}
+
+		.modal-content .avatar .round img {
+			width: 100%;
+		}
+
+		.modal-content .info {
+			font-weight: bold;
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+		}
+
+		.modal-content .info img {
+			width: 5%;
+			margin: 0 5px;
+		}
+
+		.modal-header .more {
+			width: 30%;
+			display: flex;
+			align-items: center;
+		}
+
+		.modal-cmt{
+			background-color: #FFF;
+			width: 100%;
+			flex-grow: 1;
+			overflow: auto;
+		}
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+
+		.comments .avatar-cmt {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+		}
+
+		.comments .cmt1-info {
+			display: flex;
+			width: 100%;
+			height: 60px;
+		}
+
+		.comments .avatar-cmt .round-cmt {
+			width: 50%;
+			height: 50%;
+			border-radius: 50%;
+			overflow: hidden; 
+		}
+
+		.comments .avatar-cmt img{
+			width: 100%;
+		}
+
+		.comments .info-cmt img {
+			width: 5%;
+			margin: 0 5px;
+		}
+
+		.comments .info-cmt {
+			display: flex;
+			align-items: center;
+		}
+
+		.info-cmt .cmt-acc {
+			margin-top: 10px;
+			display: inline;
+			padding-right: 10%;
+		}
+
+		.time {
+			padding-left: 60px;
+			font-size: 14px;
+			color: #999;
+		}
+
+		.user-name {
+			font-weight: bold;
+		}
+
+		.modal-side .reactions {
+			background: #FFF;
+			height: 15%;
+			padding: 10px 15px 0;
+		}
+
+		.react-icons button {
+			background: transparent;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 5px;
+		}
+
+		.react-icons .save-btn {
+			float: right;
+		}
+
+		.reactions .like-count {
+			font-weight: bold;
+			font-size: 15px;
+			padding: 0 5px;
+		}
+
+		.reactions .post-time {
+			font-size: 12px;
+			color: #999;
+			padding: 10px 5px;
+		}
+
+		.modal-side .write-cmt {
+			border-top: 1px solid #DDD;
+			background: #FFF;
+			height: 15%;
+			display: flex;
+			align-items: center;
+		}
+
+		.write-cmt form {
+			width: 100%;
+			padding: 0 16px;
+		}
+
+		.write-cmt .cmt-content {
+			border: none;
+			outline: none;
+			font-size: 14px;
+		}
+
+		.write-cmt .confirm-btn {
+			border: none;
+			outline: none;
+			background: transparent;
+			font-size: 16px;
+			color: #0095f6;
+			opacity: 0.3;
+			float: right;
+		}
 	</style>
 	<script src="https://kit.fontawesome.com/9b3bf5531d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="main">
-		<div class="row">
-			<div class="item">
-				<a href="#">
-					<div class="item-img">
-						<img src="./main1.jpg">
-					</div>
-					<div class="images-icon"></div>
-					<div class="overlay">
-						<div class="like">
-							<i class="fas fa-heart"></i>
-							<span>25.8k</span>
+		<div class="box-modal" id="bx-modal">
+			<div class="modal-content">
+				<div class="modal-img">
+					<img src="./modal1.jpg">
+				</div>
+				<div class="modal-side">
+					<div class="modal-header">
+						<div class="avatar">
+							<div class="round">
+								<img src="./huy-me.jpg">
+							</div>
 						</div>
+						<div class="info">
+							<span class="user-name">ctpham_</span>
+							<img src="./ig-check.png">
+							<span>• Đang theo dõi</span>
+						</div>
+						<div class="more">
+							<i class="fas fa-ellipsis-h"></i>
+						</div>
+					</div>
+					<div class="modal-cmt">
 						<div class="comments">
-							<i class="fas fa-comment"></i>
-							<span>62</span>
+							<div class="cmt1">
+								<div class="cmt1-info">
+									<div class="avatar-cmt">
+										<div class="round-cmt">
+											<img src="./huy-me.jpg">
+										</div>
+									</div>
+									<div class="info-cmt">
+										<div class="cmt-acc">
+											<span class="user-name">ctpham_</span>
+											<img src="./ig-check.png">
+											<span>#throwback Chillin with the Sailor Moon @loungu</span>
+										</div>
+									</div>
+								</div>
+								<p class="time">2 tuần</p>
+							</div>
+							<div class="cmt1">
+								<div class="cmt1-info">
+									<div class="avatar-cmt">
+										<div class="round-cmt">
+											<img src="./huy-me.jpg">
+										</div>
+									</div>
+									<div class="info-cmt">
+										<div class="cmt-acc">
+											<span class="user-name">ctpham_</span>
+											<img src="./ig-check.png">
+											<span>#throwback Chillin with the Sailor Moon @loungu</span>
+										</div>
+									</div>
+								</div>
+								<p class="time">2 tuần</p>
+							</div>
+							<div class="cmt1">
+								<div class="cmt1-info">
+									<div class="avatar-cmt">
+										<div class="round-cmt">
+											<img src="./huy-me.jpg">
+										</div>
+									</div>
+									<div class="info-cmt">
+										<div class="cmt-acc">
+											<span class="user-name">ctpham_</span>
+											<img src="./ig-check.png">
+											<span>#throwback Chillin with the Sailor Moon @loungu</span>
+										</div>
+									</div>
+								</div>
+								<p class="time">2 tuần</p>
+							</div>
+							<div class="cmt1">
+								<div class="cmt1-info">
+									<div class="avatar-cmt">
+										<div class="round-cmt">
+											<img src="./huy-me.jpg">
+										</div>
+									</div>
+									<div class="info-cmt">
+										<div class="cmt-acc">
+											<span class="user-name">ctpham_</span>
+											<img src="./ig-check.png">
+											<span>#throwback Chillin with the Sailor Moon @loungu</span>
+										</div>
+									</div>
+								</div>
+								<p class="time">2 tuần</p>
+							</div>
+							<div class="cmt1">
+								<div class="cmt1-info">
+									<div class="avatar-cmt">
+										<div class="round-cmt">
+											<img src="./huy-me.jpg">
+										</div>
+									</div>
+									<div class="info-cmt">
+										<div class="cmt-acc">
+											<span class="user-name">ctpham_</span>
+											<img src="./ig-check.png">
+											<span>#throwback Chillin with the Sailor Moon @loungu</span>
+										</div>
+									</div>
+								</div>
+								<p class="time">2 tuần</p>
+							</div>
+							<div class="cmt1">
+								<div class="cmt1-info">
+									<div class="avatar-cmt">
+										<div class="round-cmt">
+											<img src="./huy-me.jpg">
+										</div>
+									</div>
+									<div class="info-cmt">
+										<div class="cmt-acc">
+											<span class="user-name">ctpham_</span>
+											<img src="./ig-check.png">
+											<span>#throwback Chillin with the Sailor Moon @loungu</span>
+										</div>
+									</div>
+								</div>
+								<p class="time">2 tuần</p>
+							</div>
+							<div class="cmt1">
+								<div class="cmt1-info">
+									<div class="avatar-cmt">
+										<div class="round-cmt">
+											<img src="./huy-me.jpg">
+										</div>
+									</div>
+									<div class="info-cmt">
+										<div class="cmt-acc">
+											<span class="user-name">ctpham_</span>
+											<img src="./ig-check.png">
+											<span>#throwback Chillin with the Sailor Moon @loungu</span>
+										</div>
+									</div>
+								</div>
+								<p class="time">2 tuần</p>
+							</div>
+							<div class="cmt1">
+								<div class="cmt1-info">
+									<div class="avatar-cmt">
+										<div class="round-cmt">
+											<img src="./huy-me.jpg">
+										</div>
+									</div>
+									<div class="info-cmt">
+										<div class="cmt-acc">
+											<span class="user-name">ctpham_</span>
+											<img src="./ig-check.png">
+											<span>#throwback Chillin with the Sailor Moon @loungu</span>
+										</div>
+									</div>
+								</div>
+								<p class="time">2 tuần</p>
+							</div>
+							<div class="cmt1">
+								<div class="cmt1-info">
+									<div class="avatar-cmt">
+										<div class="round-cmt">
+											<img src="./huy-me.jpg">
+										</div>
+									</div>
+									<div class="info-cmt">
+										<div class="cmt-acc">
+											<span class="user-name">ctpham_</span>
+											<img src="./ig-check.png">
+											<span>#throwback Chillin with the Sailor Moon @loungu</span>
+										</div>
+									</div>
+								</div>
+								<p class="time">2 tuần</p>
+							</div>
 						</div>
 					</div>
-				</a>
-			</div>
-			<div class="item">
-				<a href="#">
-					<div class="item-img">
-						<img src="./main2.jpg">
-					</div>
-					<div class="overlay">
-						<div class="like">
-							<i class="fas fa-heart"></i>
-							<span>40.4k</span>
+					<div class="reactions">
+						<div class="react-icons">
+							<button class="like-btn">
+								<svg aria-label="Thích" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+									<path clip-rule="evenodd" d="M34.3 3.5C27.2 3.5 24 8.8 24 8.8s-3.2-5.3-10.3-5.3C6.4 3.5.5 9.9.5 17.8s6.1 12.4 12.2 17.8c9.2 8.2 9.8 8.9 11.3 8.9s2.1-.7 11.3-8.9c6.2-5.5 12.2-10 12.2-17.8 0-7.9-5.9-14.3-13.2-14.3zm-1 29.8c-5.4 4.8-8.3 7.5-9.3 8.1-1-.7-4.6-3.9-9.3-8.1-5.5-4.9-11.2-9-11.2-15.6 0-6.2 4.6-11.3 10.2-11.3 4.1 0 6.3 2 7.9 4.2 3.6 5.1 1.2 5.1 4.8 0 1.6-2.2 3.8-4.2 7.9-4.2 5.6 0 10.2 5.1 10.2 11.3 0 6.7-5.7 10.8-11.2 15.6z" fill-rule="evenodd"></path>
+								</svg>
+							</button>
+							<button class="cmt-btn">
+								<svg aria-label="Bình luận" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+									<path clip-rule="evenodd" d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z" fill-rule="evenodd"></path>
+								</svg>
+							</button>
+							<button class="share-btn">
+								<svg aria-label="Chia sẻ bài viết" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+									<path d="M46.5 3.5h-45C.6 3.5.2 4.6.8 5.2l16 15.8 5.5 22.8c.2.9 1.4 1 1.8.3L47.4 5c.4-.7-.1-1.5-.9-1.5zm-40.1 3h33.5L19.1 18c-.4.2-.9.1-1.2-.2L6.4 6.5zm17.7 31.8l-4-16.6c-.1-.4.1-.9.5-1.1L41.5 9 24.1 38.3z"></path><path d="M14.7 48.4l2.9-.7"></path>
+								</svg>
+							</button>
+							<button class="save-btn">
+								<svg aria-label="Lưu" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+									<path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z"></path>
+								</svg>
+							</button>
 						</div>
-						<div class="comments">
-							<i class="fas fa-comment"></i>
-							<span>49</span>
-						</div>
+						<p class="like-count">40,547 lượt thích</p>
+						<p class="post-time">2 THÁNG 4</p>
 					</div>
-				</a>
-			</div>
-			<div class="item">
-				<a href="#">
-					<div class="item-img">
-						<img src="./main3.jpg">
+					<div class="write-cmt">
+						<form>
+							<input type="text" name="cmt" class="cmt-content" placeholder="Thêm bình luận...">
+							<button class="confirm-btn">Đăng</button>
+						</form>
 					</div>
-					<div class="overlay">
-						<div class="like">
-							<i class="fas fa-heart"></i>
-							<span>70k</span>
-						</div>
-						<div class="comments">
-							<i class="fas fa-comment"></i>
-							<span>108</span>
-						</div>
-					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="item">
-				<a href="#">
-					<div class="item-img">
-						<img src="./main4.jpg">
+				<div class="item-img">
+					<img src="./main1.jpg">
+				</div>
+				<div class="images-icon"></div>
+				<div class="overlay">
+					<div class="like">
+						<i class="fas fa-heart"></i>
+						<span>25.8k</span>
 					</div>
-					<div class="video-icon"></div>
-					<div class="overlay">
-						<div class="like">
-							<i class="fas fa-heart"></i>
-							<span>94.6k</span>
-						</div>
-						<div class="comments">
-							<i class="fas fa-comment"></i>
-							<span>92</span>
-						</div>
+					<div class="comments">
+						<i class="fas fa-comment"></i>
+						<span>62</span>
 					</div>
-				</a>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="item-img">
+					<img src="./main2.jpg">
+				</div>
+				<div class="overlay">
+					<div class="like">
+						<i class="fas fa-heart"></i>
+						<span>40.4k</span>
+					</div>
+					<div class="comments">
+						<i class="fas fa-comment"></i>
+						<span>49</span>
+					</div>
+				</div>
 			</div>
 			<div class="item">
-				<a href="#">
-					<div class="item-img">
-						<img src="./main5.jpg">
+				<div class="item-img">
+					<img src="./main3.jpg">
+				</div>
+				<div class="overlay">
+					<div class="like">
+						<i class="fas fa-heart"></i>
+						<span>70k</span>
 					</div>
-					<div class="images-icon"></div>
-					<div class="overlay">
-						<div class="like">
-							<i class="fas fa-heart"></i>
-							<span>22.6k</span>
-						</div>
-						<div class="comments">
-							<i class="fas fa-comment"></i>
-							<span>36</span>
-						</div>
+					<div class="comments">
+						<i class="fas fa-comment"></i>
+						<span>108</span>
 					</div>
-				</a>
-			</div>
-			<div class="item">
-				<a href="#">
-					<div class="item-img">
-						<img src="./main6.jpg">
-					</div>
-					<div class="images-icon"></div>
-					<div class="overlay">
-						<div class="like">
-							<i class="fas fa-heart"></i>
-							<span>48.5k</span>
-						</div>
-						<div class="comments">
-							<i class="fas fa-comment"></i>
-							<span>117</span>
-						</div>
-					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="item">
-				<a href="#">
-					<div class="item-img">
-						<img src="./main7.jpg">
+				<div class="item-img">
+					<img src="./main4.jpg">
+				</div>
+				<div class="video-icon"></div>
+				<div class="overlay">
+					<div class="like">
+						<i class="fas fa-heart"></i>
+						<span>94.6k</span>
 					</div>
-					<div class="images-icon"></div>
-					<div class="overlay">
-						<div class="like">
-							<i class="fas fa-heart"></i>
-							<span>15.6k</span>
-						</div>
-						<div class="comments">
-							<i class="fas fa-comment"></i>
-							<span>19</span>
-						</div>
+					<div class="comments">
+						<i class="fas fa-comment"></i>
+						<span>92</span>
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="item">
-				<a href="#">
-					<div class="item-img">
-						<img src="./main8.jpg">
+				<div class="item-img">
+					<img src="./main5.jpg">
+				</div>
+				<div class="images-icon"></div>
+				<div class="overlay">
+					<div class="like">
+						<i class="fas fa-heart"></i>
+						<span>22.6k</span>
 					</div>
-					<div class="overlay">
-						<div class="like">
-							<i class="fas fa-heart"></i>
-							<span>15.9k</span>
-						</div>
-						<div class="comments">
-							<i class="fas fa-comment"></i>
-							<span>15</span>
-						</div>
+					<div class="comments">
+						<i class="fas fa-comment"></i>
+						<span>36</span>
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="item">
-				<a href="#">
-					<div class="item-img">
-						<img src="./main9.jpg">
+				<div class="item-img">
+					<img src="./main6.jpg">
+				</div>
+				<div class="images-icon"></div>
+				<div class="overlay">
+					<div class="like">
+						<i class="fas fa-heart"></i>
+						<span>48.5k</span>
 					</div>
-					<div class="images-icon"></div>
-					<div class="overlay">
-						<div class="like">
-							<i class="fas fa-heart"></i>
-							<span>12.8k</span>
-						</div>
-						<div class="comments">
-							<i class="fas fa-comment"></i>
-							<span>8</span>
-						</div>
+					<div class="comments">
+						<i class="fas fa-comment"></i>
+						<span>117</span>
 					</div>
-				</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="item">
+				<div class="item-img">
+					<img src="./main7.jpg">
+				</div>
+				<div class="images-icon"></div>
+				<div class="overlay">
+					<div class="like">
+						<i class="fas fa-heart"></i>
+						<span>15.6k</span>
+					</div>
+					<div class="comments">
+						<i class="fas fa-comment"></i>
+						<span>19</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-img">
+					<img src="./main8.jpg">
+				</div>
+				<div class="overlay">
+					<div class="like">
+						<i class="fas fa-heart"></i>
+						<span>15.9k</span>
+					</div>
+					<div class="comments">
+						<i class="fas fa-comment"></i>
+						<span>15</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-img">
+					<img src="./main9.jpg">
+				</div>
+				<div class="images-icon"></div>
+				<div class="overlay">
+					<div class="like">
+						<i class="fas fa-heart"></i>
+						<span>12.8k</span>
+					</div>
+					<div class="comments">
+						<i class="fas fa-comment"></i>
+						<span>8</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		var overLay = document.getElementsByClassName('overlay');
+		var boxModal = document.getElementById('bx-modal');
+		for(var i = 0; i < overLay.length; i++) {
+			overLay[i].addEventListener('click', showModal);
+		}
+
+		window.onclick = function(event) {
+			if(event.target == boxModal) {
+				boxModal.style.display = 'none';
+			}
+		}
+
+		function showModal(event) {
+			boxModal.style.display = 'flex';
+		}
+	</script>
 </body>
 </html>
